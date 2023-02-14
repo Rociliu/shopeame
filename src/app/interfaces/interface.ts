@@ -1,3 +1,4 @@
+/* Declaramos la Interfaz de datos */
 export interface Product {
     id: number;
     name: string;
@@ -5,5 +6,4 @@ export interface Product {
     description: string;
     stars: number;
     image: string;
-
 }
