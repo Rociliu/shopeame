@@ -1,0 +1,28 @@
+
+.header-btn {
+    background-image: linear-gradient(to right, rgb(74, 128, 221), rgb(26, 24, 69));
+    border:none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.5s;
+    margin: 31.920px 10px 31.920px 0px;
+
+        &:hover{
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+}
+
+.header-text {
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+.header {
+    display: inline-flex;
+    margin-left: 300px;    
+}
