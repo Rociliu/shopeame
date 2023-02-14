@@ -1,4 +1,8 @@
-
+.header-contenedor {
+    // border: solid rgb(209, 18, 18) 2px;
+    width: 20%;
+    margin: auto;
+}
 .header-btn {
     background-image: linear-gradient(to right, rgb(74, 128, 221), rgb(26, 24, 69));
     border:none;
@@ -22,7 +26,35 @@
     font-size: 1.5em;
 }
 
-.header {
+.header-logo {
     display: inline-flex;
-    margin-left: 300px;    
+    margin: auto;
+    // border: solid black 2px;   
 }
+
+.header-links {
+    background-color: rgb(233, 206, 52);
+    height: 50px;
+    
+
+        &__ul {
+        display: flex;
+        list-style-type: none;
+        width: 30%;
+        margin: auto;
+        }
+}
+
+.header-links__li {
+    margin: 10px ;   
+}
+
+a {
+    text-decoration: none;
+    color: black;  
+
+    &:hover{
+        color: white;
+    }
+}
+
