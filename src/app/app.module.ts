@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+/* Importamos el modulo Modules */
+import { ModulesModule } from './modules/modules.module';
+
+/* Importamos el AppRoutingModule */
 import { AppRoutingModule } from './app-routing.module';
+
+/* Importamos los Componentes */
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
+
+/* Importamos el HttpClientModule */
+import { HttpClientModule } from '@angular/common/http';
+
+/* Importamos el ProductServiceService */
+import { ProductServiceService } from './services/product-service.service';
+
 
 @NgModule({
   declarations: [
@@ -14,9 +27,13 @@ import { FooterComponent } from './shared/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModulesModule,
+    /* Importamos el HttpClientModule */
+    HttpClientModule
   ],
-  providers: [],
+  /* Añadimos ProductServiceService al provider */
+  providers: [ProductServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
