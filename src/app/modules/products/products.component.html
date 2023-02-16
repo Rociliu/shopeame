@@ -1,11 +1,11 @@
 <h2 class="products-gallery__title h2">Listado de Productos ({{ productsList.length }})</h2>
-<ul class="products-gallery__list ul">
+<ul class="products-gallery__list">
     <li *ngFor="let products of productsList" class="products-gallery__item li">
       <a href="#" class="products-gallery__a a">
         <img [src]="products.image" [alt]="products.name" class="products-gallery__image image">
       </a>
       <h3 class="products-gallery__name h3">{{ products.id }} - {{ products.name }}</h3>
-      <h4 class="products-gallery__price h4">{{ products.price }}</h4>
+      <h6 class="products-gallery__price h4">Precio: {{ products.price }}</h6>
       <p class="products-gallery__description p">{{ products.description }}</p>
       <p class="products-gallery__stars p">{{ products.stars }}</p>
     </li>
