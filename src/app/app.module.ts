@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -18,12 +19,16 @@ import { HttpClientModule } from '@angular/common/http';
 /* Importamos el ProductServiceService */
 import { ProductServiceService } from './services/product-service.service';
 
+/* importar CambioModoService */
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent, 
+   
   ],
   imports: [
     BrowserModule,
