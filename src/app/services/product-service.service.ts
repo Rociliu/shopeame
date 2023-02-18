@@ -20,9 +20,14 @@ const productsUrl = 'https://my-json-server.typicode.com/franlindebl/shopeame-ap
 
 export class ProductServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(productsUrl);
+  }
+
+  //Creo la función getProduct
+  getProduct(id:number): Observable<Product[]> {
+    return this.http.get<Product[]>(`${productsUrl}/${id}`);
   }
 }
