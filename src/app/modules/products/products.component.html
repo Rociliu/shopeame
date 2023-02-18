@@ -8,5 +8,7 @@
       <h6 class="products-gallery__price h4">Precio: {{ products.price }}</h6>
       <p class="products-gallery__description p">{{ products.description }}</p>
       <p class="products-gallery__stars p">{{ products.stars }}</p>
+      <!--Botón para editar cada artículo-->
+      <button routerLink="/productsList/{{products.id}}">Editar</button>
     </li>
 </ul>
