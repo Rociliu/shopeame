@@ -1,3 +1,6 @@
+import { ProductsComponent } from './modules/products/products.component';
+import { GestionComponent } from './modules/gestion/gestion.component';
+import { HomeComponent } from './modules/home/home.component';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 /* Importamos el ProductServiceService */
 import { ProductServiceService } from './services/product-service.service';
+import { ProductComponent } from './modules/product/product.component';
 
 /* importar CambioModoService */
 
@@ -28,12 +32,14 @@ import { ProductServiceService } from './services/product-service.service';
     AppComponent,
     HeaderComponent,
     FooterComponent, 
+  
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ModulesModule,
+
     /* Importamos el HttpClientModule */
     HttpClientModule
   ],

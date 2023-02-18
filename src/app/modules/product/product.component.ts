@@ -1,4 +1,11 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component } from '@angular/core';
+
+// Importamos nuestro servicio ProductServiceService
+import { ProductServiceService } from '../../services/product-service.service';
+
+// Importamos la interfaz Product
+import { Product } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-product',
@@ -6,5 +13,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent {
+  id!: number;
+  product!: Product[]; //indico que comic es mi interfaz Product
+
+  constructor(private productService: ProductServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
+    
+ngOnInit(): void {
+  this.activatedRoute.paramMap.subscribe(params=> {
+    this.id = Number(params.get('id'));
+  })
+
+ /* this.productService.getProduct(this.id).subscribe((data: Product[])=> {
+    this.product = data;
+  })*/
+}    
+
 
 }
+
