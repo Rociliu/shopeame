@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 /* Importamos el ProductServiceService */
 import { ProductServiceService } from './services/product-service.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,11 @@ import { ProductServiceService } from './services/product-service.service';
     AppRoutingModule,
     ModulesModule,
     /* Importamos el HttpClientModule */
-    HttpClientModule
+    HttpClientModule,
+
+    /*Importamos los módulos para el formulario */
+    FormsModule,
+    ReactiveFormsModule,
   ],
   /* Añadimos ProductServiceService al provider */
   providers: [ProductServiceService],
