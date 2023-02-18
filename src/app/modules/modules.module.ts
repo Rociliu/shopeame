@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './../app-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -17,7 +18,9 @@ import { DetailComponent } from './gestion/detail/detail.component';
     DetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    //importo el AppRoutingModule:
+    AppRoutingModule,
   ]
 })
 export class ModulesModule { }
