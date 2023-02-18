@@ -25,4 +25,18 @@ export class ProductServiceService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(productsUrl);
   }
+
+
+  /* Creamos el objeto que usaremos para obtener los datos de nuestro servicio en el formulario */
+  public productData = {
+    name: "",
+    price: "",
+    description: "",
+    stars: "",
+    image: "",
+    id: "",
+  }
+
 }
+
+
