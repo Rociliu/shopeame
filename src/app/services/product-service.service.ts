@@ -37,6 +37,12 @@ export class ProductServiceService {
     id: "",
   }
 
+  /* Creamos la función para meter el nuevo producto */
+  /*hay que crear: newProduct(product:any????){
+    debe retornar el valor que recibe del formulario y pushearlo a un array
+  }
+
+  */
 }
 
 

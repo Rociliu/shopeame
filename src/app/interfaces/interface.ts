@@ -7,3 +7,4 @@ export interface Product {
     stars: number;
     image: string;
 }
+

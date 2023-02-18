@@ -1,11 +1,24 @@
-<h1>Creación/edición de productos</h1>
+<h2>Creación/edición de productos</h2>
 
-<form novalidate [formGroup] = "productForm">
-
-<fieldset>
-    <label>Nombre del producto:</label>
-    
-</fieldset>
+<!-- form novalidate [formGroup] = "productForm"> -->
+<form>
 
 
+    <label>Nombre del producto:</label><br>
+    <input type="text" id="name" formControlName="name" placeholder="Por ej: Tiesto para planta"><br>
+        
+    <label>Precio:</label><br>
+    <input type="number" id="price" formControlName="price" placeholder="Por ej: 9.50"><br>
+
+    <label>Descripción:</label><br>
+    <input type="text" id="description" formControlName="description" placeholder="Por ej: Lo más buscado"><br>
+
+    <label>Ruta de la imagen:</label><br>
+    <input type="text" id="image" formControlName="image" placeholder="Por ej: http://blblb.com/img.jpg"><br>
+
+    <label>Opiniones:</label><br>
+    <input type="number" id="stars" formControlName="stars" placeholder="Por ej: 4.75"><br><br>
+
+
+<input type="submit" value="Guardar">
 </form>
