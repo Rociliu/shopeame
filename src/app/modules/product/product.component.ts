@@ -14,7 +14,7 @@ import { Product } from '../../interfaces/interface';
 })
 export class ProductComponent {
   id!: number;
-  product!: Product[]; //indico que comic es mi interfaz Product
+  product!: any; 
 
   constructor(private productService: ProductServiceService, private activatedRoute: ActivatedRoute, private router: Router) {}
     
@@ -23,9 +23,9 @@ ngOnInit(): void {
     this.id = Number(params.get('id'));
   })
 
- /* this.productService.getProduct(this.id).subscribe((data: Product[])=> {
+  this.productService.getProduct(this.id).subscribe((data: any)=> {
     this.product = data;
-  })*/
+  })
 }    
 
 

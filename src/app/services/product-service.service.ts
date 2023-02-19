@@ -27,7 +27,7 @@ export class ProductServiceService {
   }
 
   //Creo la función getProduct
-  getProduct(id:number): Observable<Product[]> {
-    return this.http.get<Product[]>(`${productsUrl}/${id}`);
+  getProduct(id:number): any {
+    return this.http.get(`${productsUrl}/${id}`);
   }
 }
