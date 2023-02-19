@@ -26,6 +26,9 @@ import { ProductComponent } from './modules/product/product.component';
 /* importar CambioModoService */
 
 
+/* Importamos los módulos para el formulario */
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -41,7 +44,11 @@ import { ProductComponent } from './modules/product/product.component';
     ModulesModule,
 
     /* Importamos el HttpClientModule */
-    HttpClientModule
+    HttpClientModule,
+
+    /*Importamos los módulos para el formulario */
+    FormsModule,
+    ReactiveFormsModule,
   ],
   /* Añadimos ProductServiceService al provider */
   providers: [ProductServiceService],

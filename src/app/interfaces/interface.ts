@@ -9,13 +9,25 @@ export interface Product {
 }
 
 export interface FeaturedProduct {
-    title: string;
-    image: string;
-    price: number;
-    description: string;
-  }
-  
+  title: string;
+  image: string;
+  price: number;
+  description: string;
+}
+
 export interface FeaturedProductSection {
-    section: string;
-    products: FeaturedProduct[];
-  }
+  section: string;
+  products: FeaturedProduct[];
+}
+
+/*Declaramos la interfaz para el formulario*/
+export interface productForm {
+  name: "",
+  price: "",
+  description: "",
+  stars: "",
+  image: "",
+  id: "",
+}
+
+

@@ -9,6 +9,8 @@ import { GestionComponent } from './gestion/gestion.component';
 import { ProductComponent } from './product/product.component';
 import { DetailComponent } from './gestion/detail/detail.component';
 import { FeaturedProductsComponent } from './home/featured-products/featured-products.component';
+/*Importamos los módulos para el formulario*/
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,14 @@ import { FeaturedProductsComponent } from './home/featured-products/featured-pro
     FeaturedProductsComponent
   ],
   imports: [
-    CommonModule,
     //importo el AppRoutingModule:
     AppRoutingModule,
+    CommonModule,  
+    //Importamos los módulos para el formulario, al igual que en app.module.ts
+    FormsModule,
+    ReactiveFormsModule
   ]
+
+  
 })
 export class ModulesModule { }
