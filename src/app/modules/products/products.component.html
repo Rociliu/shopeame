@@ -1,83 +1,47 @@
 <div class="contenedor-base">
 
-<div class="title-buttons-style">
-  <h2 class="products-gallery__title h2">Listado de Productos ({{ productsList.length }})</h2>
-  <button (click)="cambioCuadricula()">cuad </button>
-  <button (click)="cambioLista()">Lista</button>
-</div>
-
-
-  <div *ngIf="cuadricula; else lista">
-    
-    <ul class="products-gallery__list">
-      <div class="contendor-cuadricula">
-      <li *ngFor="let products of productsList" class="products-gallery__item li">
-        <a href="#" class="products-gallery__a a">
-          <img [src]="products.image" [alt]="products.name" class="products-gallery__image">
-        </a>
-        <h3 class="products-gallery__name listado__h3">{{ products.id }} - {{ products.name }}</h3>
-        <h6 class="products-gallery__price listado__h4">Precio: {{ products.price }}</h6>
-        <p class="products-gallery__description listado__p">{{ products.description }}</p>
-        <p class="products-gallery__stars listado__p">{{ products.stars }}</p>
-      </li>
-    </div>
-    </ul> 
-</div>
-
-
-<ng-template #lista>
-  <ul class="lista">
-    <li *ngFor="let products of productsList" class="products-gallery__item li">
-<<<<<<< HEAD
-      <a href="#" class="products-gallery__a a">
-        <img [src]="products.image" [alt]="products.name" class="products-gallery__image image">
-      </a>
-      <h3 class="products-gallery__name h3">{{ products.id }} - {{ products.name }}</h3>
-      <h6 class="products-gallery__price h4">Precio: {{ products.price }}</h6>
-      <p class="products-gallery__description p">{{ products.description }}</p>
-      <p class="products-gallery__stars p">{{ products.stars }}</p>
-      <!--Botón para editar cada artículo-->
-      <button routerLink="/productsList/{{products.id}}">Editar</button>
-=======
-      <!-- <div class="contenedor-imagen"> -->
-        <a href="#" class="products-gallery__a a">
-          <img [src]="products.image" [alt]="products.name" class="products-gallery__image-list">
-        </a>
-      <!-- </div> -->
-      <!-- <div class="contenedor-lista"> -->
-      <h3 class="products-gallery__name-list h3">{{ products.id }} - {{ products.name }}</h3>
-      <h6 class="products-gallery__price-list h4">Precio: {{ products.price }}</h6>
-      <p class="products-gallery__description-list p">{{ products.description }}</p>
-      <p class="products-gallery__stars-list p">{{ products.stars }}</p>
-    <!-- </div> -->
->>>>>>> 068c3ca1b2216f444ddd66364f9617d3358750d7
-    </li>
-  </ul>
-</ng-template>
-
-</div>
-
-<!-- 
-<ng-template #lista>
-  <ul class="imagenes">
-    <li *ngFor="let products of productsList" class="products-gallery__item li">
-      <div class="contenedor-imagen">
-        <a href="#" class="products-gallery__a a">
-          <img [src]="products.image" [alt]="products.name" class="products-gallery__image-list">
-        </a>
+  <div class="title-buttons-style">
+    <h2 class="products-gallery__title h2">Listado de Productos ({{ productsList.length }})</h2>
+    <button (click)="cambioCuadricula()">cuad </button>
+    <button (click)="cambioLista()">Lista</button>
+  </div>
+  
+  
+    <div *ngIf="cuadricula; else lista">
+      
+      <ul class="products-gallery__list">
+        <div class="contendor-cuadricula">
+        <li *ngFor="let products of productsList" class="products-gallery__item li">
+          <a href="#" class="products-gallery__a a">
+            <img [src]="products.image" [alt]="products.name" class="products-gallery__image">
+          </a>
+          <h3 class="products-gallery__name listado__h3">{{ products.id }} - {{ products.name }}</h3>
+          <h6 class="products-gallery__price listado__h4">Precio: {{ products.price }}</h6>
+          <p class="products-gallery__description listado__p">{{ products.description }}</p>
+          <p class="products-gallery__stars listado__p">{{ products.stars }}</p>
+        </li>
       </div>
-  </ul>
-
-  <ul class="lista">
-    <li *ngFor="let products of productsList" class="products-gallery__item li">
-      <div class="contenedor-lista">
-      <h3 class="products-gallery__name listado__h3">{{ products.id }} - {{ products.name }}</h3>
-      <h6 class="products-gallery__price listado__h4">Precio: {{ products.price }}</h6>
-      <p class="products-gallery__description listado__p">{{ products.description }}</p>
-      <p class="products-gallery__stars listado__p">{{ products.stars }}</p>
-    </div>
-    </li>
-  </ul>
-</ng-template>
- -->
+      </ul> 
+  </div>
+  
+  
+  <ng-template #lista>
+    <ul class="lista">
+      <li *ngFor="let products of productsList" class="products-gallery__item li">
+        <!-- <div class="contenedor-imagen"> -->
+          <a href="#" class="products-gallery__a a">
+            <img [src]="products.image" [alt]="products.name" class="products-gallery__image-list">
+          </a>
+        <!-- </div> -->
+        <!-- <div class="contenedor-lista"> -->
+        <h3 class="products-gallery__name-list h3">{{ products.id }} - {{ products.name }}</h3>
+        <h6 class="products-gallery__price-list h4">Precio: {{ products.price }}</h6>
+        <p class="products-gallery__description-list p">{{ products.description }}</p>
+        <p class="products-gallery__stars-list p">{{ products.stars }}</p>
+      <!-- </div> -->
+      </li>
+    </ul>
+  </ng-template>
+  
+  </div>
 
