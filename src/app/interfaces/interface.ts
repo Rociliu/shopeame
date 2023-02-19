@@ -8,3 +8,12 @@ export interface Product {
     image: string;
 }
 
+export interface productForm {
+    name: "",
+    price: "",
+    description: "",
+    stars: "",
+    image: "",
+    id: "",
+}
+
