@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ProductServiceService } from 'src/app/services/product-service.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { productForm } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-gestion',
@@ -11,52 +11,35 @@ import { Router } from '@angular/router';
 export class GestionComponent {
 
   /* Declaramos formulario */
-  productFormRegister!: FormGroup
+  productFormRegister: FormGroup;
 
-  constructor(
-    private FormBuilder: FormBuilder, 
-    private productService: ProductServiceService,
-    private router: Router) {}
-
-  /* Creamos las variables que obtendrán los datos que se recojan del formulario */
-  public productForm = this.productService.productData;
-  public productFormId = this.productService.productData.description;
-
-  /* Definimos la construcción del formulario */
-ngOnInit (): void {
-  this.productFormRegister= this.FormBuilder.group({
-    name:[
-      this.productForm.name, 
-      [Validators.required, Validators.minLength(2), Validators.maxLength(20)]
-    ], 
-    price:[
-      this.productForm.price,
-      [Validators.required]
-    ], 
-    description:[
-      this.productForm.description,
-      [Validators.required, Validators.maxLength(200)]
-    ],
-    stars:[
-      this.productForm.stars,
-      [Validators.required]
-    ],
-    image:[
-      this.productForm.image,
-      [Validators.required]
-    ]
-  })
-
-  /* Actualizamos los cambios */
-  this.productFormRegister.valueChanges.subscribe(changes=> {
-    this.productForm = changes
-  })
-}
-
-/* Creamos la función onSubmit */
-  onSubmit(){
-    console.log(this.productForm); //no me aparece nada en la consola del navegador,
-                                  // me da error en la lectura de la propiedad .length en products.html
+  constructor(private FormBuilder: FormBuilder) {
+    this.productFormRegister = this.FormBuilder.group( {
+      name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
+      price:['', [Validators.required]], 
+      description:['',[Validators.required, Validators.maxLength(200)]],
+      stars:['',[Validators.required]],
+      image:['',[Validators.required]]
+    })
   }
+
+  /* Creamos la función onSubmit y la variable submitted que será utilizada en la función */
+  submitted: boolean = false;
+
+  onSubmit(): void {
+    this.submitted = true;
+    if (this.productFormRegister.valid) {
+      const newProduct: productForm = {
+        name: this.productFormRegister.get('name')?.value,
+        price: this.productFormRegister.get('price')?.value,
+        description: this.productFormRegister.get('description')?.value,
+        stars: this.productFormRegister.get('stars')?.value,
+        image: this.productFormRegister.get('image')?.value,
+        id: this.productFormRegister.get('id')?.value,
+      }
+      console.log('nuevo producto', newProduct);
+    }
+  }
+
 
 }
