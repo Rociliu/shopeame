@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 
 /* Importamos el ProductServiceService */
 import { ProductServiceService } from './services/product-service.service';
+
+/* Importamos los módulos para el formulario */
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 

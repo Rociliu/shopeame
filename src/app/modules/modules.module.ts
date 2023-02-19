@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { GestionComponent } from './gestion/gestion.component';
 import { ProductComponent } from './product/product.component';
 import { DetailComponent } from './gestion/detail/detail.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,10 @@ import { DetailComponent } from './gestion/detail/detail.component';
     DetailComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,  
+    //Importamos los módulos para el formulario, al igual que en app.module.ts
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class ModulesModule { }
