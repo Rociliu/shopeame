@@ -7,6 +7,7 @@ import { ProductsComponent } from './products/products.component';
 import { GestionComponent } from './gestion/gestion.component';
 import { ProductComponent } from './product/product.component';
 import { DetailComponent } from './gestion/detail/detail.component';
+import { FeaturedProductsComponent } from './home/featured-products/featured-products.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { DetailComponent } from './gestion/detail/detail.component';
     ProductsComponent,
     GestionComponent,
     ProductComponent,
-    DetailComponent
+    DetailComponent,
+    FeaturedProductsComponent
   ],
   imports: [
     CommonModule

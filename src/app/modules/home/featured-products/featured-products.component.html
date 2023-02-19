@@ -1,0 +1,21 @@
+<!-- START FEATURED PRODUCTS SECTION -->
+<section class="section__featured-products section">
+    <h2 class="featured-products__h2 h2">{{ productsList.section }}</h2>
+    <ul class="featured-products__ul ul">
+        <li *ngFor="let product of productsList.products" class="featured-item__li li">
+            <div class="featured-item-container">
+                <div class="overlay">
+                    <a href="#">
+                        <img [src]="product.image" class="featured-item__img img">
+                    </a>
+                </div>
+            </div>
+            <div class="featured-item__info">
+                <h4 class="featured-item-title__h4 h4"><b>{{ product.title }}</b></h4>
+                <h4 class="featured-item-price__h4 h4"><b>{{ product.price }}</b></h4>
+            </div>
+            <p class="featured-item-description__p p">{{ product.description }}</p>
+        </li>
+    </ul>
+</section>
+<!-- END FEATURED PRODUCTS SECTION -->
