@@ -1,30 +1,52 @@
 /* -- START PRODUCTS.COMPONENTS STYLES -- */
-
-
-.products-gallery__title {
-    text-align: center;
+.title-buttons-style {
+    display: inline-flex;
+    margin-left: 100px;
+}
+button {
+    background-color: rgb(238, 235, 235);
+    transition-duration: 0.4s;
+    text-decoration: none;
+    border: none;
+    margin: 10px 3px 0px 5px;
+    font-size: 0.5em;
+      &:active {
+        box-shadow: 3px 5px #8a8787;
+        transform: translateY(4px);
+        background-color: white;
+      }
 }
 
+
+/* vista cuadrícula */
+
+.products-gallery__title {
+    text-align: left;
+    font-size: 0.9em;
+    margin-right: 450px;
+}
+
+.contendor-cuadricula{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-top: 50px;
+}
  .products-gallery__list {
-        // border: black solid 2px;
         display: flex;
         flex-wrap: wrap;
-        /* align-items: left;  */ 
-        margin: 0 50px;  
-        gap: 7px;         
+        margin: 0 40px;  
+        gap: 7px;        
 } 
 
 .products-gallery__item {
-    // border: rgb(237, 16, 16) solid 2px;
+    
     width: 200px;
     margin-bottom: 20px;
 } 
 
-/* .products-gallery__a {} */
-
 .products-gallery__image {
-    // border: rgb(85, 38, 203) solid 2px;
-    width: 120px;
+    width: 130px;
     height: 100px;
     display: block;
     margin-left: auto;
@@ -33,20 +55,41 @@
 
     &:hover {
         transform: scale(1.2);
-    }
-    
+    }  
 }
 
  .products-gallery__name, .products-gallery__price, .products-gallery__description {
-    font-size: 0.7em;
+    font-size: 0.6em;
     text-align: center;
     margin-bottom: 2px;
     margin-top: 1px;
  }
 
- .products-gallery__name {
-    margin-top: 10px;  
- }
+
+ /* Vista listado */
+
+ .lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .products-gallery__image-list {
+        width: 130px;
+        height: 100px;
+        display: block;
+        margin-left: 90px;
+        width: 50%;
+    }
+
+        .products-gallery__name-list, .products-gallery__price-list, 
+        .products-gallery__description-list, .products-gallery__stars-list {
+            font-size: 0.6em;
+            text-align: center;
+            margin: 1px 0px 2px 70px;
+        }
+
+
 
 /* .products-gallery__price {} */
 

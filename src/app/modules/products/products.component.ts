@@ -11,8 +11,26 @@ import { Product } from '../../interfaces/interface';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
+
+
 export class ProductsComponent implements OnInit {
 
+
+  /* cambio modo lista/cuadrícula: */
+  cuadricula: boolean = true;
+    //función para el botón de seleccionar vista Lista
+    cambioLista() {
+      this.cuadricula = false;
+    }
+    //función para el botón de seleccionar vista cuadrícula
+    cambioCuadricula() {
+        this.cuadricula = true;
+      }
+  /* fin cambio modo vista lista/cuadrícula */
+
+
+
+  /* Inicio pintar productos: */
   productsList!: Product[];
 
   constructor(private productService: ProductServiceService) {}
@@ -21,5 +39,10 @@ export class ProductsComponent implements OnInit {
     this.productService.getProducts().subscribe((data: Product[]) => {
       this.productsList = data;
     });
-  }
+
+    /* fin pintar productos */  
+}
+
+
+
 }
