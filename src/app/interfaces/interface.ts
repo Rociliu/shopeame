@@ -1,6 +1,6 @@
 /* Declaramos la Interfaz de datos */
 export interface Product {
-    id: number;
+    id: number | null; // Indicamos que aceptamos null para cuando no sea necesaria esta propiedad (p.ej. en el formulario)
     name: string;
     price: number;
     description: string;
@@ -8,12 +8,4 @@ export interface Product {
     image: string;
 }
 
-export interface productForm {
-    name: "",
-    price: "",
-    description: "",
-    stars: "",
-    image: "",
-    id: "",
-}
 
