@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from './../../interfaces/interface';
 
 @Component({
   selector: 'app-product',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
+  @Input() product: Product;
+
+  /* Declaramos que el input va a ser un objeto igual que Product*/
+  constructor() {
+    this.product = {} as Product;
+  }
 }

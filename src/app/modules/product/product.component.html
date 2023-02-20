@@ -1,1 +1,6 @@
-<p>product works!</p>
+<div *ngIf="product">
+    <h2 *ngIf="product.name">{{ product.name }}</h2>
+    <p *ngIf="product.price">Price: {{ product.price }}</p>
+    <p *ngIf="product.description">Descripción: {{ product.description }}</p>
+    <p *ngIf="product.stars">Valoración: {{ product.stars }}</p>
+    <img *ngIf="product.image" [src]="product.image" alt="{{ product.image }}"/>
