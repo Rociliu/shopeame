@@ -21,13 +21,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     DetailComponent,
     FeaturedProductsComponent
   ],
+  exports: [
+    GestionComponent,
+    DetailComponent,
+    ProductsComponent,
+  ],
+
   imports: [
     //importo el AppRoutingModule:
     AppRoutingModule,
     CommonModule,  
     //Importamos los módulos para el formulario, al igual que en app.module.ts
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ]
 
   
