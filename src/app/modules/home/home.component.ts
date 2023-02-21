@@ -16,39 +16,39 @@ export class HomeComponent {
     products: [
       {
         title: 'Máscara de Mono',
-        price: 15.95,
+        price: 50.95,
         image: 'assets/images/Latest/01-mascara-mono.jpg',
-        description: 'Esta máscara tiene un diseño de cara de mono con detalles realistas, como orejas, nariz y pelo en la cabeza.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Máscara de Unicornio',
-        price: 18.95,
+        price: 50.95,
         image: 'assets/images/Latest/02-mascara-unicornio.jpg',
-        description: 'Esta máscara presenta un diseño de cara de unicornio con cuerno, orejas y detalles de colores brillantes en la cabeza.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Máscara de Cocodrilo',
-        price: 20.95,
+        price: 50.95,
         image: 'assets/images/Latest/03-mascara-cocodrilo.webp',
-        description: 'Esta máscara tiene un diseño de cara de cocodrilo con detalles realistas, como ojos, dientes y texturas de piel.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Máscara de Pez Verde',
-        price: 17.95,
+        price: 50.95,
         image: 'assets/images/Latest/04-mascara-monstruo-pez.webp',
-        description: 'Esta máscara presenta un diseño de cara de pez con detalles realistas, como aletas, escamas y ojos.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Máscara de Tiburón',
-        price: 19.95,
+        price: 50.95,
         image: 'assets/images/Latest/05-mascara-tiburon.jpg',
-        description: 'Esta máscara tiene un diseño de cara de tiburón con detalles realistas, como dientes, ojos y aletas.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Máscara de Tigre',
-        price: 16.95,
+        price: 50.95,
         image: 'assets/images/Latest/06-mascara-tigre.jpg',
-        description: 'Esta máscara presenta un diseño de cara de tigre con detalles realistas, como orejas, bigotes y rayas.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       }
     ]
   };
@@ -58,39 +58,39 @@ export class HomeComponent {
     products: [
       {
         title: 'Alfombra Trambólica 1',
-        price: 120.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/01-alfombra-trambolica.jpg',
-        description: 'Esta alfombra tiene un diseño único de estilo bohemio con una mezcla de colores vibrantes y patrones tribales.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Alfombra Trambólica 2',
-        price: 90.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/02-alfombra-trambolica.webp',
-        description: 'Esta alfombra presenta un diseño de rayas anchas en tonos neutros, lo que la convierte en una opción versátil para cualquier decoración del hogar.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Alfombra Trambólica 3',
-        price: 200.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/03-alfombra-trambolica.webp',
-        description: 'Esta alfombra tiene un diseño clásico de persa con un patrón de flores y bordes detallados.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Alfombra Trambólica 4',
-        price: 150.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/04-alfombra-trambolica.webp',
-        description: 'Esta alfombra presenta un diseño geométrico en tonos pastel suaves, lo que la hace perfecta para habitaciones con una decoración delicada.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Alfombra Trambólica 5',
-        price: 180.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/05-alfombra-trambolica.jpg',
-        description: 'Esta alfombra tiene un diseño degradado de tonos de azul y verde, lo que la convierte en una opción ideal para una decoración de estilo costero o tropical.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       },
       {
         title: 'Alfombra Trambólica 6',
-        price: 250.95,
+        price: 50.95,
         image: 'assets/images/Alfombras/06-alfombra-trambolica.jpg',
-        description: 'Esta alfombra presenta un diseño abstracto y colorido que puede funcionar como pieza central de cualquier habitación.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
       }
     ]
   };

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ProductForm } from '../../interfaces/interface';
+import { productForm } from '../../interfaces/interface';
 
 @Component({
   selector: 'app-gestion',
@@ -29,7 +29,7 @@ export class GestionComponent {
   onSubmit(): void {
     this.submitted = true;
     if (this.productFormRegister.valid) {
-      const newProduct: ProductForm = {
+      const newProduct: productForm = {
         name: this.productFormRegister.get('name')?.value,
         price: this.productFormRegister.get('price')?.value,
         description: this.productFormRegister.get('description')?.value,
@@ -40,4 +40,6 @@ export class GestionComponent {
       console.log('nuevo producto', newProduct);
     }
   }
+
+
 }
