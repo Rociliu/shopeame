@@ -1,0 +1,25 @@
+.section-container{
+    width: 55%;
+    margin: auto;
+    border: solid black 2px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.container-product {
+    display: flex;
+    border: solid red 2px;
+}
+ .container-image {
+    border: solid 2px blue;
+    width: 50%;
+ }
+.container-botones {
+    border: pink solid 2px
+}
+button {
+    border: solid green 2px;
+      
+}

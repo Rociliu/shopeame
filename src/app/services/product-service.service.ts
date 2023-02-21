@@ -26,10 +26,16 @@ export class ProductServiceService {
     return this.http.get<Product[]>(productsUrl);
   }
 
-  //Creo la función getProduct
-  getProduct(id:number): any {
+
+  //Con este servicio se obtiene la url y el id del producto 
+  getProduct(id:number) {
     return this.http.get(`${productsUrl}/${id}`);
   }
+
+  deleteProduct(id:number) {
+    return this.http.delete(`${productsUrl}/${id}`);
+  }
+
 }
 
 
