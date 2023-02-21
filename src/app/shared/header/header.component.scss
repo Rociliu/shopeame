@@ -1,3 +1,5 @@
+/* -- START HEADER.COMPONENT STYLES -- */
+
 .header-contenedor {
     display: flex;
 }
@@ -5,24 +7,23 @@
     background-image: linear-gradient(to right, rgb(74, 128, 221), rgb(26, 24, 69));
     border:none;
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 8px;
-    width: 30px;
-    height: 30px;
     transition-duration: 0.5s;
-    margin: 31.920px 10px 31.920px 0px;
+    margin: 0 0.75em;
+    width: 2em;
+    height: 1.75em;
 
         &:hover{
-            font-size: 24px;
+            font-size: 1.25em;
             cursor: pointer;
         }
-        
 }
 
 .header-logo {
-    display: inline-flex;
+    display: flex;
     margin: auto;
-    // border: solid black 2px;   
+    align-items: center; 
 }
 
 .header-links {
@@ -44,4 +45,6 @@ a {
         color: white;
     }
 }
+
+/* -- END HEADER.COMPONENT STYLES -- */
 

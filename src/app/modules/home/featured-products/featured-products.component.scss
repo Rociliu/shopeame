@@ -1,75 +1,75 @@
-.section__featured-products {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2em 0;
+/* -- START FEATURED-PRODUCTS.COMPONENT STYLES -- */
+
+.section {
+    &__featured-products {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
 }
 
 /* .featured-products__h2 { } */
 
-.featured-products__ul {
-    display: flex;
-    gap: 2em 1em;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+.featured-products {
 
-/* .featured-item-container {
-    position: relative;
-} */
+    &__ul {
+        display: flex;
+        gap: 2em 1em;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
 
 .overlay {
     overflow: hidden;
 }
-  
-/* .featured-item-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 0, 0, 0.8);
-    color: white;
-    padding: 1em;
-    display: none;
-} */
-  
-/* .featured-item-container:hover, .featured-item-title:hover {
-    display: block;
-} */
 
-.featured-item__img {
-    transition: transform 0.3s;
-}
+.featured-item {
 
-.featured-item__img:hover {
-    filter: grayscale(100%);
-}
-
-.featured-item__img:hover {
-    transform:  scale(1.2);
-}
-
-.featured-item__info {
-    display: flex;
-    justify-content: space-between;
+    &__img {
+        transition: transform 0.3s;
+        &:hover {
+            filter: grayscale(100%);
+            transform:  scale(1.2);
+        }
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .featured-item__li {
-        width: calc(100%);
+    .featured-item {
+
+        &__li {
+            width: calc(100%);
+        }
+        &__info {
+            flex-direction: row;
+        }
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .featured-item__li {
-        width: calc(50% - 1em);
+    .featured-item {
+
+        &__li {
+            width: calc(50% - 1em);
+        }
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .featured-item__li {
-        width: calc(33.333% - 1em);
+    .featured-item {
+
+        &__li {
+            width: calc(33.333% - 1em);
+        }
     }
 }
 
@@ -80,7 +80,12 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .featured-item__li {
-        width: calc(16.666% - 1em);
+    .featured-item {
+
+        &__li {
+            width: calc(16.666% - 1em);
+        }
     }
 }
+
+/* -- END FEATURED-PRODUCTS.COMPONENT STYLES -- */
