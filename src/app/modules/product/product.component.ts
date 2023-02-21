@@ -40,7 +40,7 @@ y redirige a la página principal de productos .navigate(["/"])*/
 
 deleteProduct(){
 this.productService.deleteProduct(this.id).subscribe((data: any)=> {
-  this.router.navigate(["/deleted"]);
+  this.router.navigate(["/"]);
 })
 }
 
