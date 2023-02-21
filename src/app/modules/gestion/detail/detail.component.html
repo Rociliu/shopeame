@@ -1,1 +1,9 @@
-<p>detail works!</p>
+<div *ngIf="product">
+
+    <img *ngIf="product.image" [src]="product.image" alt="{{product.name}}"/>
+    <h2 *ngIf="product.name">{{product.name}}</h2>
+    <p *ngIf="product.price">Precio: {{product.price}}</p>
+    <p *ngIf="product.description">Descripción: {{product.description}}</p>
+    <p *ngIf="product.stars">Opiniones: {{product.stars}}</p>
+    
+</div>

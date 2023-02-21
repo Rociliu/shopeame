@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Product } from './../../../interfaces/interface';
+
 
 @Component({
   selector: 'app-detail',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent {
+  @Input() product: Product;
+
+  /*Declaramos que el input va a ser un objeto igual que nuestra interfaz Product*/
+  constructor() {
+    this.product = {} as Product;
+  }
 
 }
