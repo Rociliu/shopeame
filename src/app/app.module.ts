@@ -42,6 +42,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ModulesModule,
+    
+    
 
     /* Importamos el HttpClientModule */
     HttpClientModule,
@@ -49,6 +51,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     /*Importamos los módulos para el formulario */
     FormsModule,
     ReactiveFormsModule,
+    
   ],
   /* Añadimos ProductServiceService al provider */
   providers: [ProductServiceService],

@@ -7,12 +7,13 @@ import { GestionComponent } from './modules/gestion/gestion.component';
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "products", component: ProductsComponent},
-  {path: "gestion", component: GestionComponent},
-  {path: "products/:id", component: ProductComponent},
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
+  { path: 'gestion', loadChildren: () => import('./modules/gestion/gestion.module').then(m => m.GestionModule) },
   
-  ];
+  { path: 'products', loadChildren: () => import('./modules/products/products.module').then(m => m.ProductsModule) }
+];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes), CommonModule],
