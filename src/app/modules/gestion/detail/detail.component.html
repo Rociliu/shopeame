@@ -1,8 +1,8 @@
-<div *ngIf="product">
+<div class="product" *ngIf="product">
 
-    <img *ngIf="product.image" [src]="product.image" alt="{{product.name}}"/>
-    <h2 *ngIf="product.name">{{product.name}}</h2>
-    <p *ngIf="product.price">Precio: {{product.price}}</p>
+    <img class="img" *ngIf="product.image" [src]="product.image" alt="{{product.name}}"/>
+    <h2 class="title" *ngIf="product.name">{{product.name}}</h2>
+    <p *ngIf="product.price">Precio: {{ product.price | currency: 'EUR' }} </p>
     <p *ngIf="product.description">Descripción: {{product.description}}</p>
     <p *ngIf="product.stars">Opiniones: {{product.stars}}</p>
     

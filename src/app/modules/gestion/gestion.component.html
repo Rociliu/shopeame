@@ -1,48 +1,50 @@
 <h2>Creación/edición de productos</h2>
 <main>
     <div class="formulario">
+        
         <form novalidate [formGroup] = "productFormRegister" (ngSubmit)= "onSubmit()">  
     
             <div class="nameForm"> 
                 <label>Nombre del producto:</label><br>
-                <input type="text" id="name" formControlName="name" placeholder="Por ej: Tiesto para planta"><br>
-                <div *ngIf= "!productFormRegister.get('name')?.valid && (productFormRegister.get ('name')?.dirty || submitted)">   
-                Escriba correctamente el nombre 
-                </div> 
+                <input type="text" id="name" formControlName="name" placeholder="Ej: Maceta"><br>
+                <p *ngIf="!productFormRegister.get('name')?.valid && (productFormRegister.get ('name')?.dirty || submitted)">   
+                Máximo 20 caracteres 
+                </p> 
             </div>
         
         
             <div class="priceForm">
                 <label>Precio:</label><br>
-                <input type="number" id="price" formControlName="price" placeholder="Por ej: 9.50"><br>
-                <div *ngIf= "!productFormRegister.get('price')?.valid && (productFormRegister.get ('price')?.dirty || submitted)">   
+                <input type="number" id="price" formControlName="price" placeholder="Ej: 9.50"><br>
+                <p *ngIf="!productFormRegister.get('price')?.valid && (productFormRegister.get ('price')?.dirty || submitted)">   
                 Debe incluir el precio
-                </div>
+                </p>
             </div>
         
         
             <div class="descriptionForm">
                 <label>Descripción:</label><br>
-                <input type="text" id="description" formControlName="description" placeholder="Por ej: Lo más buscado"><br>
-                <div *ngIf= "!productFormRegister.get('description')?.valid && (productFormRegister.get ('description')?.dirty || submitted)">   
-                Escriba correctamente la descripción
-                </div>
+                <input type="text" id="description" formControlName="description" placeholder="Ej: Maceta de cerámica blanca"><br>
+                <p *ngIf="!productFormRegister.get('description')?.valid && (productFormRegister.get ('description')?.dirty || submitted)">   
+                Máximo 50 caracteres
+                </p>
             </div>
         
             <div class="imgForm">
                 <label>Ruta de la imagen:</label><br>
-                <input type="text" id="image" formControlName="image" placeholder="Por ej: http://blblb.com/img.jpg"><br>
-                <div *ngIf= "!productFormRegister.get('img')?.valid && (productFormRegister.get ('img')?.dirty || submitted)">   
-                Debe subir una imagen 
-                </div>
+                <input type="text" id="image" formControlName="image" placeholder="Ej: http://blblb.com/img.jpg"><br>
+                <p *ngIf="productFormRegister.get('img')?.valid  || submitted"> 
+                La imagen se ha subido correctamente
+        
+                </p>
             </div>
         
             <div class="opinionsForm">    
                 <label>Opiniones:</label><br>
-                <input type="number" id="stars" formControlName="stars" placeholder="Por ej: 4.75"><br><br>
-                <div *ngIf= "!productFormRegister.get('stars')?.valid && (productFormRegister.get ('stars')?.dirty || submitted)">   
-                Debe añadir una valoración 
-                </div>
+                <input type="number" id="stars" formControlName="stars" placeholder="Ej: 4.75"><br><br>
+                <p *ngIf="!productFormRegister.get('stars')?.valid && (productFormRegister.get ('stars')?.dirty || submitted)">   
+                Debe añadir una valoración de 0 a 5
+                </p>
             </div>
         
             <input class="inputForm" type="submit" value="Guardar" [disabled]="!productFormRegister.valid">

@@ -21,8 +21,8 @@ export class GestionComponent {
     this.productFormRegister = this.FormBuilder.group( {
       name: ['', [Validators.required, Validators.minLength(2), Validators.maxLength(20)]],
       price:['', [Validators.required]], 
-      description:['',[Validators.required, Validators.maxLength(200)]],
-      stars:[0,[Validators.required, Validators.min(1), Validators.max(5)]],
+      description:['',[Validators.required, Validators.maxLength(50)]],
+      stars:['',[Validators.required, Validators.min(1), Validators.max(5)]],
       image:['',[Validators.required]]
     })
   }
