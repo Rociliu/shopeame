@@ -14,6 +14,7 @@ import { ProductServiceService } from '../../services/product-service.service';
 
 export class ProductComponent {
 
+
   /* Se declaran las variables inicializando con ! */
   id!: number;
   product!: any; 
@@ -42,7 +43,7 @@ deleteProduct(){
 this.productService.deleteProduct(this.id).subscribe((data: any)=> {
   this.router.navigate(["/"]);
 })
-}
+
 
 }
-
+}
