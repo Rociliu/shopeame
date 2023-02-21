@@ -6,8 +6,7 @@
       <button (click)="cambioLista()">Lista</button>
     </div>
   </div>
-<<<<<<< HEAD
-
+  
   <div *ngIf="cuadricula; else lista">
     <ul class="products-gallery__list">
       <li *ngFor="let products of productsList" class="products-gallery__item li">
@@ -23,29 +22,10 @@
             <h4 class="products-gallery__price h4">Precio: {{ products.price }}</h4>
             <p class="products-gallery__description p">{{ products.description }}</p>
             <p class="products-gallery__stars p">{{ products.stars }}</p>
+            <button routerLink= "/products/{{products.id}}" class="products-gallery__button">Mostrar</button>
           </div>
       </li>
     </ul>  
-=======
-  
-  
-    <div *ngIf="cuadricula; else lista">
-      
-      <ul class="products-gallery__list">
-        <div class="contendor-cuadricula">
-        <li *ngFor="let products of productsList" class="products-gallery__item li">
-          <a href="#" class="products-gallery__a a">
-            <img [src]="products.image" [alt]="products.name" class="products-gallery__image">
-          </a>
-          <h3 class="products-gallery__name listado__h3">{{ products.id }} - {{ products.name }}</h3>
-          <h6 class="products-gallery__price listado__h4">Precio: {{ products.price }}</h6>
-          <p class="products-gallery__description listado__p">{{ products.description }}</p>
-          <p class="products-gallery__stars listado__p">{{ products.stars }}</p>
-          <button routerLink= "/products/{{products.id}}" class="products-gallery__button">Mostrar</button>
-        </li>
-      </div>
-      </ul> 
->>>>>>> boton-mostrar
   </div>
   
   <ng-template #lista>
