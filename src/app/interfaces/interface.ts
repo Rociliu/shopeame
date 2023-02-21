@@ -8,6 +8,7 @@ export interface Product {
     image: string;
 }
 
+/* Declaramos la Interfaz de Featured-Products */
 export interface FeaturedProduct {
   title: string;
   image: string;
@@ -20,14 +21,14 @@ export interface FeaturedProductSection {
   products: FeaturedProduct[];
 }
 
-/*Declaramos la interfaz para el formulario*/
-export interface productForm {
-  name: "",
-  price: "",
-  description: "",
-  stars: "",
-  image: "",
-  id: "",
+/* Declaramos la interfaz para el formulario */
+export interface ProductForm {
+  name: string;
+  price: number;
+  description: string;
+  stars: number;
+  image: string;
+  id: number;
 }
 
 

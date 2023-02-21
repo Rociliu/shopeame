@@ -31,7 +31,7 @@ export class ProductsComponent implements OnInit {
 
 
   /* Inicio pintar productos: */
-  productsList!: Product[];
+  productsList: Product[] = [];
 
   constructor(private productService: ProductServiceService) {}
 
@@ -41,8 +41,5 @@ export class ProductsComponent implements OnInit {
     });
 
     /* fin pintar productos */  
-}
-
-
-
+  }
 }
