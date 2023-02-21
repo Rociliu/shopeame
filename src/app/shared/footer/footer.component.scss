@@ -1,39 +1,38 @@
+/* -- START FOOTER.COMPONENT STYLES -- */
+
 .footer {
     background-color: #333333;
+    
+    &-container {
+        margin: 0 auto;
+        width: 50%;
+        padding: 2em 0;
+    }
+    &__h4 {
+        text-align: center;
+        color: white;
+        margin: 1em 0;
+    }
+    &__ul {
+        display: flex;
+        justify-content: center;
+        gap: 2em;
+        padding: 2em 0;
+    }
+    &__a {
+        color: white;
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__p-copyright {
+        text-align: center;
+        color: white;
+        padding: 3em 0;
+    }
 }
 
-.footer-container {
-    margin: 0 auto;
-    width: 50%;
-    padding: 2em 0;
-}
-
-.footer__h4 {
-    text-align: center;
-    color: white;
-    margin: 1em 0;
-
-}
-
-.footer__ul {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    padding: 2em 0;
-}
-
-.footer__a {
-    color: white;
-    font-weight: bold;
-}
-
-.footer__a:hover {
-    text-decoration: underline;
-}
-
-.footer__p-copyright {
-    text-align: center;
-    color: white;
-    padding: 3em 0; 
-}
+/* -- END FOOTER.COMPONENT STYLES -- */
 

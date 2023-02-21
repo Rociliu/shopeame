@@ -1,15 +1,24 @@
-.section__welcome-text {
-    width: 90%;
-    margin: 0 auto;
-    padding: 2em 0;
+/* -- START HOME.COMPONENT STYLES -- */
+
+.section {
+    
+    &__welcome-text {
+        width: 90%;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
 }
 
-.welcome-text__container {
-    background-color: whitesmoke;
-    padding: 2em;
+.welcome-text {
+
+    &__container {
+        background-color: whitesmoke;
+        padding: 2em;
+    }
+    &__h2 {
+        text-align: center;
+        font-size: 2em;
+    }
 }
 
-.welcome-text__h2 {
-    text-align: center;
-    font-size: 2em;
-}
+/* -- END HOME.COMPONENT STYLES -- */
