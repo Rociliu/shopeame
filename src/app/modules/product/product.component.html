@@ -1,4 +1,24 @@
-<p>product works!</p>
-<div>
-<h4>{{product?.name}} </h4> 
-</div>
+<!-- pintar el producto sobre el que hemos clickado -->
+<section class= "section-container"> 
+    <h1 class="section-title">Mostrando tu producto favorito </h1>
+    <div class="container-product">
+        <div class="container-image">
+        
+        <img [src]="product?.image">
+    </div>
+            <div>
+                <h4>{{product?.name }} </h4> 
+                <h4>{{product?.price}}</h4>
+                <h4>{{product?.description }} </h4> 
+                <h4>{{product.stars}}</h4>
+            </div>
+        </div>
+    
+        <!-- botón para ir a la ruta del producto seleccionado -->
+        <div class="container-botones">
+        <button [routerLink]="['/products']" routerLinkActive="router-link-active">Volver</button>
+        <!-- botón para eliminar ese producto -->
+        <button (click)="deleteProduct()" class="bton-eliminar">Eliminar</button>
+    </div>
+    
+</section>
